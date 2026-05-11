@@ -2,7 +2,7 @@
 
  [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://example.com) [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
- Clean, secure, and extensible .NET backend for MyFintech — powering authentication, RBAC, customers, bank accounts, investments, file uploads, notifications, and audit trails etc.
+ Clean, secure, and extensible .NET backend for MyFintech App — powering authentication, RBAC, customers, bank accounts, investments, file uploads, notifications, and audit trails etc.
 
  <div align="center">
 	<img src="screenshot/s1.png" alt="MyFintech screenshot" style="max-width:100%; width:720px; border:4px solid #0366d6; border-radius:8px; box-shadow:0 10px 30px rgba(3,102,214,0.18);" />
