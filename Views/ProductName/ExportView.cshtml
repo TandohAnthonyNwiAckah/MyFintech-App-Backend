@@ -1,0 +1,26 @@
+@model List<TANA.Models.ProductName>
+    @{
+    Layout = "_ReportLayout";
+    var record = Model.First();
+    }
+    <div id="report-title"><h1>Product Name Details</h1></div>
+    <table class="table table-sm table-striped">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>@record.id</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>@record.name</td>
+            </tr>
+            <tr>
+                <th>Date Created</th>
+                <td>@record.date_created</td>
+            </tr>
+            <tr>
+                <th>Date Updated</th>
+                <td>@record.date_updated</td>
+            </tr>
+        </tbody>
+    </table>

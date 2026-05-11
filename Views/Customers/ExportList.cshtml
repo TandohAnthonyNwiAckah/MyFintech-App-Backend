@@ -1,0 +1,38 @@
+@model List<TANA.Models.Customers>
+@{
+    Layout = "_ReportLayout";
+}
+<div id="report-title"><h1>Customers (KYC)</h1></div>
+<table class="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Marital Status</th>
+            <th>Ghana Card No.</th>
+            <th>Investment Objective</th>
+            <th>Emergency Fund</th>
+            <th>Investment Knowledge</th>
+            <th>Withdrawals</th>
+            <th>Risk Appetite</th>
+            <th>Risk Assessment</th>
+            <th>Date Created</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var record in Model)
+        {
+        <tr>
+            <td>@record.id</td>
+            <td>@record.marital_status</td>
+            <td>@record.ghana_card_number</td>
+            <td>@record.investment_objective</td>
+            <td>@record.emergency_fund</td>
+            <td>@record.investment_knowledge</td>
+            <td>@record.withdrawals</td>
+            <td>@record.risk_appetite</td>
+            <td>@record.risk_assessment</td>
+            <td>@record.date_created</td>
+        </tr>
+        }
+    </tbody>
+</table>

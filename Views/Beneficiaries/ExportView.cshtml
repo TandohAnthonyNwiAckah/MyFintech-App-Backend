@@ -1,0 +1,42 @@
+@model List<TANA.Models.Beneficiaries>
+    @{
+    Layout = "_ReportLayout";
+    var record = Model.First();
+    }
+    <div id="report-title"><h1>Beneficiary Details</h1></div>
+    <table class="table table-sm table-striped">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>@record.id</td>
+            </tr>
+            <tr>
+                <th>User Id</th>
+                <td>@record.user_id</td>
+            </tr>
+            <tr>
+                <th>Full Name</th>
+                <td>@record.full_name</td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td>@record.phone</td>
+            </tr>
+            <tr>
+                <th>Relationship</th>
+                <td>@record.relationship</td>
+            </tr>
+            <tr>
+                <th>Allocation</th>
+                <td>@record.allocation</td>
+            </tr>
+            <tr>
+                <th>Date Created</th>
+                <td>@record.date_created</td>
+            </tr>
+            <tr>
+                <th>Date Updated</th>
+                <td>@record.date_updated</td>
+            </tr>
+        </tbody>
+    </table>

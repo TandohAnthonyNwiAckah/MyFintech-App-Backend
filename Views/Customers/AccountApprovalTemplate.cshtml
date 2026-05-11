@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width"/>
+    <style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			font-size: 100%;
+			font-family: 'Avenir Next', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+			line-height: 1.65;
+		}
+		body{
+			background: #efefef;
+			-webkit-font-smoothing: antialiased;
+			-webkit-text-size-adjust: none;
+		}
+		.container {
+			margin: 20px auto;
+			max-width: 580px !important;
+		}
+		.container .masthead {
+			padding: 20px 0;
+			background:  #16a34a;
+			color: white;
+			text-align: center;
+		}
+		.container .content {
+			background: white;
+			padding: 30px 35px;
+		}
+		.container .content .message{
+			margin-top: 15px;
+			margin-bottom: 15px;
+			padding: 15px;
+			background:#eee;
+		}
+    </style>
+</head>
+<body>
+	<div class="container">
+		<div class="masthead">
+			<h1>Account Approval</h1>
+		</div>
+		<div class="content">
+			<h2>Dear @ViewBag.FullName,</h2>
+			<div class="message">
+                <p>This email is to confirm that you have been registered successfully for an account with MyFintech App</p>
+                <p>Account Number is: <b>@ViewBag.CustomerNo</b></p>
+                <p>Kindly note that MyFintech App will not be responsible for any loss occasioned by the inability or negligence on the part of the client in keeping the above information secure. Any third party access of the client’s account by reason of such negligence or failure will be his/her responsibility and not the responsibility of MyFintech App.</p>
+                <p>Thank you for signing up.</p>
+            </div>
+			<div>Best Regards,<br/>MyFintech App</div>
+		</div>
+	</div>
+</body>
+</html>

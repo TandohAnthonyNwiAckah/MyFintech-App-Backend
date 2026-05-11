@@ -1,0 +1,47 @@
+## Ignore Visual Studio temporary files, build results, and user-specific files
+.vs/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# Build directories
+bin/
+obj/
+out/
+
+# Rider / JetBrains
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# ASP.NET Core / NuGet
+*.nupkg
+*.snupkg
+*.nuspec
+*.psmdcp
+
+# Dotnet CLI
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Migrations and Database
+*.db
+*.sql
+*.sqlite
+*.mdf
+*.ldf
+
+# Logs
+*.log
+
+# Publish outputs
+publish/
+wwwroot/
+
+.DS_Store
+
+.env
+appsettings.json

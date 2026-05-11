@@ -1,0 +1,24 @@
+@model List<TANA.Models.Customers>
+@{
+    Layout = "_ReportLayout";
+    var record = Model.First();
+}
+<div id="report-title"><h1>Customer KYC Details</h1></div>
+<table class="table table-sm table-striped">
+    <tbody>
+        <tr><th>Id</th><td>@record.id</td></tr>
+        <tr><th>Marital Status</th><td>@record.marital_status</td></tr>
+        <tr><th>Residential Address</th><td>@record.residential_address</td></tr>
+        <tr><th>Ghana Card Number</th><td>@record.ghana_card_number</td></tr>
+        <tr><th>Expiry Date</th><td>@record.expiry_date</td></tr>
+        <tr><th>Place of Issuance</th><td>@record.place_of_issuance</td></tr>
+        <tr><th>Investment Objective</th><td>@record.investment_objective</td></tr>
+        <tr><th>Emergency Fund</th><td>@record.emergency_fund</td></tr>
+        <tr><th>Investment Knowledge</th><td>@record.investment_knowledge</td></tr>
+        <tr><th>Withdrawals</th><td>@record.withdrawals</td></tr>
+        <tr><th>Risk Appetite</th><td>@record.risk_appetite</td></tr>
+        <tr><th>Risk Assessment</th><td>@record.risk_assessment</td></tr>
+        <tr><th>Date Created</th><td>@record.date_created</td></tr>
+        <tr><th>Date Updated</th><td>@record.date_updated</td></tr>
+    </tbody>
+</table>

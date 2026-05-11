@@ -1,0 +1,74 @@
+@model List<TANA.Models.Users>
+    @{
+    Layout = "_ReportLayout";
+    var record = Model.First();
+    }
+    <div id="report-title"><h1>User Details</h1></div>
+    <table class="table table-sm table-striped">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>@record.id</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>@record.title</td>
+            </tr>
+            <tr>
+                <th>Firstname</th>
+                <td>@record.firstname</td>
+            </tr>
+            <tr>
+                <th>Middlename</th>
+                <td>@record.middlename</td>
+            </tr>
+            <tr>
+                <th>Surname</th>
+                <td>@record.surname</td>
+            </tr>
+            <tr>
+                <th>Maiden Name</th>
+                <td>@record.maiden_name</td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td>@record.phone</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>@record.email</td>
+            </tr>
+            <tr>
+                <th>Dob</th>
+                <td>@record.dob</td>
+            </tr>
+            <tr>
+                <th>Gender</th>
+                <td>@record.gender</td>
+            </tr>
+            <tr>
+                <th>Digital Address</th>
+                <td>@record.digital_address</td>
+            </tr>
+            <tr>
+                <th>Residential Status</th>
+                <td>@record.residential_status</td>
+            </tr>
+            <tr>
+                <th>Country</th>
+                <td>@record.country</td>
+            </tr>
+            <tr>
+                <th>User Role Id</th>
+                <td>@record.user_role_id</td>
+            </tr>
+            <tr>
+                <th>Date Created</th>
+                <td>@record.date_created</td>
+            </tr>
+            <tr>
+                <th>Date Updated</th>
+                <td>@record.date_updated</td>
+            </tr>
+        </tbody>
+    </table>

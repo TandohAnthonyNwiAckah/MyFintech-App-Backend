@@ -1,0 +1,50 @@
+@model List<TANA.Models.Employment>
+    @{
+    Layout = "_ReportLayout";
+    var record = Model.First();
+    }
+    <div id="report-title"><h1>Employment Details</h1></div>
+    <table class="table table-sm table-striped">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>@record.id</td>
+            </tr>
+            <tr>
+                <th>User Id</th>
+                <td>@record.user_id</td>
+            </tr>
+            <tr>
+                <th>Name Employer</th>
+                <td>@record.name_employer</td>
+            </tr>
+            <tr>
+                <th>Years Employ</th>
+                <td>@record.years_employ</td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>@record.address</td>
+            </tr>
+            <tr>
+                <th>Nature Business</th>
+                <td>@record.nature_business</td>
+            </tr>
+            <tr>
+                <th>Location</th>
+                <td>@record.location</td>
+            </tr>
+            <tr>
+                <th>Income Range</th>
+                <td>@record.income_range</td>
+            </tr>
+            <tr>
+                <th>Date Created</th>
+                <td>@record.date_created</td>
+            </tr>
+            <tr>
+                <th>Date Updated</th>
+                <td>@record.date_updated</td>
+            </tr>
+        </tbody>
+    </table>

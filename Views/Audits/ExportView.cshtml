@@ -1,0 +1,62 @@
+@model List<TANA.Models.Audits>
+    @{
+    Layout = "_ReportLayout";
+    var record = Model.First();
+    }
+    <div id="report-title"><h1>Audit Details</h1></div>
+    <table class="table table-sm table-striped">
+        <tbody>
+            <tr>
+                <th>Log Id</th>
+                <td>@record.log_id</td>
+            </tr>
+            <tr>
+                <th>Action</th>
+                <td>@record.action</td>
+            </tr>
+            <tr>
+                <th>Page</th>
+                <td>@record.page</td>
+            </tr>
+            <tr>
+                <th>Record Id</th>
+                <td>@record.record_id</td>
+            </tr>
+            <tr>
+                <th>User Id</th>
+                <td>@record.user_id</td>
+            </tr>
+            <tr>
+                <th>User Ip</th>
+                <td>@record.user_ip</td>
+            </tr>
+            <tr>
+                <th>User Agent</th>
+                <td>@record.user_agent</td>
+            </tr>
+            <tr>
+                <th>Request Url</th>
+                <td>@record.request_url</td>
+            </tr>
+            <tr>
+                <th>Old Values</th>
+                <td>@record.old_values</td>
+            </tr>
+            <tr>
+                <th>New Values</th>
+                <td>@record.new_values</td>
+            </tr>
+            <tr>
+                <th>Timestamp</th>
+                <td>@record.timestamp</td>
+            </tr>
+            <tr>
+                <th>Date Created</th>
+                <td>@record.date_created</td>
+            </tr>
+            <tr>
+                <th>Date Updated</th>
+                <td>@record.date_updated</td>
+            </tr>
+        </tbody>
+    </table>

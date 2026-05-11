@@ -1,0 +1,46 @@
+@model List<TANA.Models.Investments>
+    @{
+    Layout = "_ReportLayout";
+    var record = Model.First();
+    }
+    <div id="report-title"><h1>Investment Details</h1></div>
+    <table class="table table-sm table-striped">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>@record.id</td>
+            </tr>
+            <tr>
+                <th>User Id</th>
+                <td>@record.user_id</td>
+            </tr>
+            <tr>
+                <th>Investment Type</th>
+                <td>@record.investment_type</td>
+            </tr>
+            <tr>
+                <th>Product Name</th>
+                <td>@record.product_name</td>
+            </tr>
+            <tr>
+                <th>Account Number</th>
+                <td>@record.account_number</td>
+            </tr>
+            <tr>
+                <th>Account Amount</th>
+                <td>@record.account_amount</td>
+            </tr>
+            <tr>
+                <th>Payment Channel</th>
+                <td>@record.payment_channel</td>
+            </tr>
+            <tr>
+                <th>Date Created</th>
+                <td>@record.date_created</td>
+            </tr>
+            <tr>
+                <th>Date Updated</th>
+                <td>@record.date_updated</td>
+            </tr>
+        </tbody>
+    </table>

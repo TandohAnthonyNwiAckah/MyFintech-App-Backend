@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Account Verification OTP</title>
+    <style type="text/css">
+        /* Client-specific Styles */
+        body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+        table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+        img { -ms-interpolation-mode: bicubic; border: 0; line-height: 100%; outline: none; text-decoration: none; }
+
+        /* Reset Styles */
+        table { border-collapse: collapse !important; }
+        body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }
+
+        /* General Styles */
+        body {
+            font-family: 'Inter', "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #f0fdf4; /* green-50 background */
+            color: #374151;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .header {
+            background-color: #16a34a; /* green-600 */
+            padding: 35px 20px;
+            text-align: center;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .header h1 {
+            color: #ffffff;
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .content {
+            background-color: #ffffff;
+            padding: 40px 40px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+
+        .content h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #111827;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        .content p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-top: 0;
+            margin-bottom: 24px;
+            color: #4b5563;
+        }
+
+        .otp-wrapper {
+            margin-top: 32px;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .otp-code {
+            display: inline-block;
+            background-color: #f3f4f6;
+            color: #111827;
+            padding: 16px 32px;
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: 4px;
+            border-radius: 8px;
+            border: 2px dashed #d1d5db;
+        }
+
+        .disclaimer {
+            font-size: 13px;
+            line-height: 1.5;
+            color: #6b7280;
+            border-top: 1px solid #e5e7eb;
+            padding-top: 24px;
+            margin-top: 32px;
+            text-align: left;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #6b7280;
+            font-size: 13px;
+        }
+
+        .footer p {
+            margin: 0 0 8px 0;
+        }
+
+        .footer a {
+            color: #16a34a; /* green-600 */
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        @@media screen and (max-width: 600px) {
+            .content {
+                padding: 30px 20px !important;
+            }
+            .header {
+                padding: 25px 20px !important;
+            }
+            .otp-code {
+                font-size: 28px;
+                padding: 12px 24px;
+            }
+        }
+    </style>
+</head>
+<body style="margin: 0 !important; padding: 0 !important; background-color: #f0fdf4;">
+
+    <!-- Spacer for top -->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td height="40" style="font-size: 40px; line-height: 40px;">&nbsp;</td></tr>
+    </table>
+
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+            <td align="center" style="padding: 0 15px;">
+                <!-- Main Container -->
+                <table class="email-container" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #ffffff; border-radius: 8px;">
+                    
+                    <!-- Header -->
+                    <tr>
+                        <td class="header">
+                            <h1 style="color: #ffffff; font-family: 'Inter', Helvetica, Arial, sans-serif;">
+                                <span style="font-size: 32px; vertical-align: middle; margin-right: 8px;">🛡️</span> 
+                                <span style="vertical-align: middle;">@ViewBag.sitename</span>
+                            </h1>
+                        </td>
+                    </tr>
+                    
+                    <!-- Content -->
+                    <tr>
+                        <td class="content">
+                            <h2>Verify your Email Address</h2>
+                            <p>Hello @ViewBag.username,</p>
+                            <p>Thank you for registering with <strong>@ViewBag.sitename</strong>. To complete your account registration and secure your myfintech app access, please use the following verification code.</p>
+                            
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td class="otp-wrapper">
+                                        <div class="otp-code">@ViewBag.otpCode</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                            <p>Enter this code in the verification screen. Note that for your security, this code will expire shortly.</p>
+                            
+                            <div class="disclaimer">
+                                <p style="margin: 0;">If you didn't attempt to register an account with us, you can safely ignore this email.</p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                
+                <!-- Footer -->
+                <table class="email-container" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td class="footer">
+                            <p>This is an automated message, please do not reply.</p>
+                            <p>&copy; @DateTime.Now.Year @ViewBag.sitename. All rights reserved.</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Spacer for bottom -->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td height="40" style="font-size: 40px; line-height: 40px;">&nbsp;</td></tr>
+    </table>
+
+</body>
+</html>
