@@ -1,0 +1,40 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: myfintech_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: myfintechdb
+    ports:
+      - "8889:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: myfintech_api
+    restart: always
+    ports:
+      - "8020:8020"
+    environment:
+      - PORT=8020
+      - DOTNET_RUNNING_IN_CONTAINER=true
+      - ConnectionStrings__DefaultConnectionString=server=db;port=3306;userid=root;password=root;database=myfintechdb;
+      - WKHTML_EXE_PATH=/usr/bin/wkhtmltopdf
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - uploads_data:/app/uploads
+
+volumes:
+  mysql_data:
+  uploads_data:

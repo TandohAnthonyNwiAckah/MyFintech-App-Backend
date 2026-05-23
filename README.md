@@ -32,15 +32,38 @@
  dotnet build
  dotnet run
  # or for live reload: dotnet watch run
- ```
+  ```
 
- 4. Open the API docs:
+  4. Open the API docs:
 
- ```
- http://localhost:8020/swagger
- ```
+  ```
+  http://localhost:8020/swagger
+  ```
 
- ## Database
+  ## Running with Docker (Recommended)
+  This project includes Docker support to run the backend and its MySQL database in containers.
+
+  1. **Start the application and database services**:
+     ```bash
+     docker compose up -d --build
+     ```
+     This builds the API image (installing all necessary dependencies like `wkhtmltopdf` for PDF export functionality) and starts a MySQL container.
+
+  2. **Apply migrations and seed the database**:
+     ```bash
+     docker compose exec api dotnet myfintech.dll --seed
+     ```
+
+  3. **Access the application**:
+     - API Swagger Documentation: [http://localhost:8020/swagger](http://localhost:8020/swagger)
+     - MySQL Host (local exposure): `localhost:8889` (user: `root`, password: `root`, database: `myfintechdb`)
+
+  4. **Stop the services**:
+     ```bash
+     docker compose down
+     ```
+
+  ## Database
  - Create and apply EF migrations (EF tools required):
 
  ```bash
